@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// membuat tabel (model)
+model DataMahasiswa {
+  // nama tabel, tipe data, keterangan
+  id            Int      @id @default(autoincrement())
+  nik           Int
+  nama_lengkap  String
+  panggilan     String
+  usia          Int
+  jenis_kelamin String
+  phone         String   @unique
+  email         String   @unique
+  alamat_rumah  String
+  createAt      DateTime @default(now())
+  updateAt      DateTime @updatedAt
+}

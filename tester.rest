@@ -1,0 +1,20 @@
+### membuat Create data mahasiswa
+POST http://localhost:9000/api/mahasiswa/create
+Content-Type: application/json
+
+
+# harus diubah kalau ada yang unique
+{
+    "nik" : 1221536346,
+    "nama_lengkap" : "alexander",
+    "panggilan" : "alex",
+    "usia" : 21,
+    "jenis_kelamin" : "laki-laki",
+    "phone" : "123456789",
+    "email" : "xander0@gmail.com",
+    "alamat_rumah" : "hanya saya yang tau"
+}
+
+### membuat Read data mahasiswa
+GET http://localhost:9000/api/mahasiswa/read
+Content-Type: application/json
